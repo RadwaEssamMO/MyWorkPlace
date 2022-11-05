@@ -5,6 +5,9 @@ jobs:
   print_hello:
     docker:
       - image: circleci/node:13.8.0
+    
+    environment:
+      My pipeline id is << pipeline.id >> and my git branch is << pipeline.git.branch >>
     steps:
       - run: echo hello
   print_world:
