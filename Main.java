@@ -1,0 +1,43 @@
+package InhertanceExcersize;
+
+public class Main {
+    public static void main(String[] args) {
+        //ClassChallengeExcersize radwaAccount = new ClassChallengeExcersize();
+        ClassChallengeExcersize radwaAccount = new ClassChallengeExcersize("2654323",1000.0,"kdflkfl","jjjhwdhjd","677696");
+        System.out.println(radwaAccount.getAccountBalance());
+//        radwaAccount.setAccountNumber("23874872");
+//        radwaAccount.setCustomerEmail("radwaessam");
+//        radwaAccount.setCustomerName("Radwa Essam");
+//        radwaAccount.setCustomerPhone("98782091");
+
+        radwaAccount.Withdrawing(100.0);
+        radwaAccount.Depositing(250);
+        radwaAccount.Withdrawing(50);
+        radwaAccount.Withdrawing(200);
+
+        SimpleCalculator calculator = new SimpleCalculator();
+        calculator.setFirstNumber(5.0);
+        calculator.setSecondNumber(4);
+        System.out.println("add= " + calculator.getAdditionResult());
+        System.out.println("subtract= " + calculator.getSubtractionResult());
+        calculator.setFirstNumber(5.25);
+        calculator.setSecondNumber(0);
+        System.out.println("multiply= " + calculator.getMultiplicationResult());
+        System.out.println("divide= " + calculator.getDivisionResult());
+
+
+        Person person = new Person();
+        person.setFirstName("");   // firstName is set to empty string
+        person.setLastName("");    // lastName is set to empty string
+        person.setAge(10);
+        System.out.println("fullName= " + person.getFullName());
+        System.out.println("teen= " + person.isTeen());
+        person.setFirstName("John");    // firstName is set to John
+        person.setAge(18);
+        System.out.println("fullName= " + person.getFullName());
+        System.out.println("teen= " + person.isTeen());
+        person.setLastName("Smith");    // lastName is set to Smith
+        System.out.println("fullName= " + person.getFullName());
+
+    }
+}
